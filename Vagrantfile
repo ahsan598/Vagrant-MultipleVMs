@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
       vb.memory = "2048"
       vb.cpus = "2"
     end
-    web02.vm.provider :virtualbox do |vb|
+    web03.vm.provider :virtualbox do |vb|
       vb.gui = true
     end
   end
