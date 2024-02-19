@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "web03" do |web03|
     web03.vm.box = "ubuntu/jammy64"
-    web02.ssh.insert_key = false
+    web03.ssh.insert_key = false
     web03.vm.network "private_network", ip: "192.168.*.*"
     web03.vm.hostname = "Docker"
     web03.vm.provider "virtualbox" do |vb|
