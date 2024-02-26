@@ -38,6 +38,7 @@ Vagrant.configure("2") do |config|
     web03.vm.box = "ubuntu/jammy64"
     web03.ssh.insert_key = false
     web03.vm.network "private_network", ip: "192.168.*.*"
+    web03.vm.network "forwarded_port", guest: 80, host: 8085
     web03.vm.hostname = "Docker"
     web03.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
